@@ -348,9 +348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  minY: 0
-  maxY: 0
-  oldPosition: 0
+  moveRange: 0
+  oldPosition: {x: 0, y: 0, z: 0}
+  maxX: 0
 --- !u!1001 &4717462341953826423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183010279731353202, guid: 6e97b714fa7ecce478b88132f9c47db6, type: 3}
       propertyPath: m_Name
-      value: Obstacles
+      value: Incoming
       objectReference: {fileID: 0}
     - target: {fileID: 6183010279731353202, guid: 6e97b714fa7ecce478b88132f9c47db6, type: 3}
       propertyPath: m_IsActive
