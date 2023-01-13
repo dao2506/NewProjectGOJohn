@@ -1,43 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ChoosePlayerButton : MonoBehaviour
 {
 
-    public string playerName;
-    // Start is called before the first frame update
-    void ChooseJohn()
+    private int index;
+    private string[] charactersnames = { "Chicken John", "Eagle", "Yellow Bird" };
+    [SerializeField] GameObject[] characters;
+    [SerializeField] TextMeshProUGUI charactersname;
+
+    public static GameObject selectedCharacters;
+    private void Start()
     {
-        playerName = "Chicken John";
-        loadLv1();
+        index = 0;
+        
+        SelectCharacter();
     }
 
-    void chooseBlue()
+    public void OnPreButtonClick()
     {
-        playerName = "Blue Bird";
-        loadLv1();
+        Debug.Log("Click PreBtn");
+        if (index > 0)
+        {
+            index--;
+        }
+       
+        SelectCharacter();
     }
 
-    void chooseYellow()
-    {
-        playerName = "Yellow Bird";
-        loadLv1();
+    public void OnNextButtonClick() {
+        Debug.Log("Click NextBtn");
+        if (index < characters.Length -1 )
+        {
+            index++;
+        }
+       
+        SelectCharacter();
     }
 
-    void chooseEagle()
+    private void SelectCharacter()
     {
-        playerName = "Eagle";
-        loadLv1();
+        //isSelected.transform.T;
+        for (int i = 0;i< characters.Length;i++)
+        {
+            if (i == index)
+            {
+                selectedCharacters = characters[i];
+                charactersname.text = characters[i].name;
+            }
+        }
+        Debug.Log("Index=" + index);
+        Debug.Log("Lenght " + characters.Length);
     }
-
-    void chooseOwl() {
-        playerName = "Owl";
-        loadLv1();
-    }
-
-    void loadLv1()
-    {
-        UnityEngine.Application.LoadLevel("Level1");
-    }
+   
 }
