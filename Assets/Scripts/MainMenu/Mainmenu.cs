@@ -5,20 +5,25 @@ using UnityEngine;
 public class Mainmenu : MonoBehaviour
 {
 
-    public void loadCutScreen()
-    {
-
+    public void loadCutScreen() {
         UnityEngine.Application.LoadLevel("CutScene");
     }
 
-    public void loadLv1()
-    {
-
+    public void loadLv1() { 
         UnityEngine.Application.LoadLevel("Level1");
     }
-    public void loadSettingMenu()
-    {
-
+    public void loadSettingMenu(){
         UnityEngine.Application.LoadLevel("SettingMenu");
+    }
+    public void loadChangePlayer(){
+        UnityEngine.Application.LoadLevel("ChoosePlayer");
+    }
+
+    public void loadCredit(){
+        UnityEngine.Application.LoadLevel("Credit");
+    }
+
+    public void loadScoreBoard() {
+        UnityEngine.Application.LoadLevel("ScoreBoard");
     }
 }
