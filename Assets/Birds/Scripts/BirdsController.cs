@@ -15,7 +15,7 @@ public class BirdsController : MonoBehaviour
 
     public static int numCoin;
     public static int numScore;
-    private string activeEffect;
+    public static string activeEffect;
 
     // Start is called before the first frame update
     void Start()
