@@ -16,8 +16,8 @@ public class GameController : MonoBehaviour
         
     }
 
-    void Endgame()
+    public void Endgame()
     {
-
+        
     }
 }
