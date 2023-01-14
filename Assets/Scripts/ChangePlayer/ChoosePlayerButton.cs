@@ -26,7 +26,7 @@ public class ChoosePlayerButton : MonoBehaviour
         {
             index--;
         }
-        return true;
+        //return true;
         SelectCharacter();
     }
 
@@ -37,7 +37,7 @@ public class ChoosePlayerButton : MonoBehaviour
             index++;
         }
         SelectCharacter();
-        return true;
+        //return true;
     }
 
     private void SelectCharacter()
@@ -54,7 +54,5 @@ public class ChoosePlayerButton : MonoBehaviour
         Debug.Log("Index=" + index);
         Debug.Log("Lenght " + characters.Length);
     }
-   
-
-       
+        
 }
