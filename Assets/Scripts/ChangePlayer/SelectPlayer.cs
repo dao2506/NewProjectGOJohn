@@ -36,16 +36,16 @@ public class SelectPlayer : MonoBehaviour
     public void PlayGame()
     {
         PrefabUtility.SaveAsPrefabAsset(playerCharacter, "Assets/Background/Bird in Select menu/Bird in Select menu.png");
-        UnityEngine.Application.LoadLevel("Level1");
+        UnityEngine.Application.LoadLevel("Levels/Level1");
     }
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
+    //}
 }
