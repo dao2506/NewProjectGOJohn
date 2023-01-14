@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Endgame.unity
+    guid: 98eb5feb742b89f4bb1faf7968d1f5f3
+  - enabled: 1
     path: Assets/Scenes/ChoosePlayer.unity
     guid: fdb3b34d00dd0cf4cbed7ca5fd3da643
   - enabled: 1
