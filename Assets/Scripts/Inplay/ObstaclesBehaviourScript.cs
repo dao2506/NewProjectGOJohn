@@ -15,12 +15,12 @@ public class ObstaclesBehaviourScript : MonoBehaviour
         obj = gameObject;
         oldPosition = obj.transform.position;
         moveSpeed = 5;
+        moveRange = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        obj.transform.Translate(new Vector3(0, 1 * Time.smoothDeltaTime * moveSpeed, 0));
         //Debug.Log(player.transform.position.x +"," + player.transform.position.y);
         if (Vector3.Distance(oldPosition, obj.transform.position) > moveRange)
         {
