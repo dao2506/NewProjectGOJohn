@@ -64,7 +64,8 @@ public class BirdsController : MonoBehaviour
             //Debug.Log("Hit: " + moveSpeed);
         }
         else if (collision.tag == "coc")
-            Destroy(gameObject);
+            Endgame();
+        //Destroy(gameObject);
         else if (collision.tag == "Space")
             numScore += 1;
         else
@@ -84,4 +85,8 @@ public class BirdsController : MonoBehaviour
         moveSpeed *= -1;
     }
 
+    public void Endgame()
+    {
+        UnityEngine.Application.LoadLevel("Endgame");
+    }
 }
