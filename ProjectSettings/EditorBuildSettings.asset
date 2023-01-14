@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ChoosePlayer.unity
     guid: fdb3b34d00dd0cf4cbed7ca5fd3da643
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: d39ac78d3ad053a44aff84b1c430cccd
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: bab26002b6ca6814b8557d4f5eebf9cf
   - enabled: 1
     path: Assets/Scenes/ScoreBoard.unity
     guid: 332e7adcf6895844fb2c5414686ec71a

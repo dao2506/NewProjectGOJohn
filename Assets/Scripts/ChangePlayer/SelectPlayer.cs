@@ -12,6 +12,8 @@ public class SelectPlayer : MonoBehaviour
     public List<Sprite> characters = new List<Sprite>();
     private int selectedCharacter = 0;
     public GameObject playerCharacter;
+    private string[] characterNames = { "Chicken John", "Eagle", "Yellow Bird" };
+    public static string selectedCharacterName = "Chicken John";
     
     public void NextOption()
     {
@@ -19,8 +21,10 @@ public class SelectPlayer : MonoBehaviour
         if (selectedCharacter == characters.Count)
         {
             selectedCharacter = 0;
-            sr.sprite = characters[selectedCharacter];
         }
+        sr.sprite = characters[selectedCharacter];
+        selectedCharacterName= characterNames[selectedCharacter];
+        //Debug.Log(characterNames[selectedCharacter]);
     }
 
     public void PreOption()
@@ -29,8 +33,9 @@ public class SelectPlayer : MonoBehaviour
         if (selectedCharacter < 0)
         {
             selectedCharacter = characters.Count - 1;
-            sr.sprite = characters[selectedCharacter];
         }
+        sr.sprite = characters[selectedCharacter];
+        selectedCharacterName = characterNames[selectedCharacter];
     }
 
     public void PlayGame()

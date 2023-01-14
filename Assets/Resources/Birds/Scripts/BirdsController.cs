@@ -42,13 +42,14 @@ public class BirdsController : MonoBehaviour
     void FixedUpdate()
     {
         rb2D.AddForce(new Vector2(0f, moveSpeed), ForceMode2D.Impulse);
+        //Debug.Log(moveSpeed);
 
         if (!isJump && moveHorizontal > 0.1f)
         {
             // rb2D.AddForce(new Vector2(jumpForce, 0f), ForceMode2D.Impulse);
-            Vector3 movedPos = transform.position;
-            movedPos.x += jumpForce;
-            transform.position = movedPos;
+            Vector3 jumpPos = transform.position;
+            jumpPos.x += jumpForce;
+            transform.position = jumpPos;
         }
     }
 
@@ -56,9 +57,11 @@ public class BirdsController : MonoBehaviour
     {
         if (collision.tag == "MainCamera")
         {
+            //Debug.Log("Hit camera");
             ChangeDirection();
+            //Debug.Log("Hit: " + moveSpeed);
         }
-        else if (collision.tag == "Coc")
+        else if (collision.tag == "coc")
             Destroy(gameObject);
         else if (collision.tag == "Space")
             numScore += 1;
