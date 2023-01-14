@@ -12,7 +12,7 @@ public class SelectPlayer : MonoBehaviour
     public List<Sprite> characters = new List<Sprite>();
     private int selectedCharacter = 0;
     public GameObject playerCharacter;
-    //private string[] characterNames = { "Chicken John", "Eagle", "Yellow Bird" };
+    private string[] characterNames = { "Chicken John", "Eagle", "Yellow Bird" };
     public static string selectedCharacterName = "Chicken John";
     
     public void NextOption()
@@ -53,7 +53,7 @@ public class SelectPlayer : MonoBehaviour
                 break;
 
         }
-        PrefabUtility.SaveAsPrefabAsset(playerCharacter, path);
+        PrefabUtility.SaveAsPrefabAsset(playerCharacter,  path);
         UnityEngine.Application.LoadLevel("Levels/Level1");
     }
     //void Start()
