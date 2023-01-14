@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class SelectPlayer : MonoBehaviour
@@ -40,6 +39,19 @@ public class SelectPlayer : MonoBehaviour
 
     public void PlayGame()
     {
+        string path = "Assets/Resources/Birds/Prefabs/Custom/Chicken John.prefab";
+        switch (selectedCharacter)
+        {
+            case 0:
+                path = "Assets/Resources/Birds/Prefabs/Custom/Chicken John.prefab";
+                break;
+            case 1:
+                path = "Assets/Resources/Birds/Prefabs/Custom/Eagle.prefab";
+                break;
+            case 2:
+                path = "Assets/Resources/Birds/Prefabs/Custom/Yellow Bird.prefab";
+                break;
+        }
         PrefabUtility.SaveAsPrefabAsset(playerCharacter, "Assets/Background/Bird in Select menu/Bird in Select menu.png");
         UnityEngine.Application.LoadLevel("Levels/Level1");
     }
