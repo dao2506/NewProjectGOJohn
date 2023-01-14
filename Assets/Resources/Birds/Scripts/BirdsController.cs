@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BirdsController : MonoBehaviour
@@ -17,6 +18,7 @@ public class BirdsController : MonoBehaviour
     public static int numScore;
     public static string activeEffect;
 
+    public GameObject gameController;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +64,8 @@ public class BirdsController : MonoBehaviour
             //Debug.Log("Hit: " + moveSpeed);
         }
         else if (collision.tag == "coc")
-            Destroy(gameObject);
+            EndGame();
+        //Destroy(gameObject);
         else if (collision.tag == "Space")
             numScore += 1;
         else
@@ -76,9 +79,16 @@ public class BirdsController : MonoBehaviour
             ChangeDirection();
         }
     }
+    public void EndGame()
+    {
 
+        UnityEngine.Application.LoadLevel("Endgame");
+        Destroy(gameObject);
+
+    }
     void ChangeDirection()
     {
+        gameController.GetComponent<GameController>().Endgame();
         moveSpeed *= -1;
     }
 
