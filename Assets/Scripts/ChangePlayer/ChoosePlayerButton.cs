@@ -8,6 +8,7 @@ public class ChoosePlayerButton : MonoBehaviour
 
     private int index;
     private string[] charactersnames = { "Chicken John", "Eagle", "Yellow Bird" };
+    private bool flat;
     [SerializeField] GameObject[] characters;
     [SerializeField] TextMeshProUGUI charactersname;
 
@@ -15,29 +16,28 @@ public class ChoosePlayerButton : MonoBehaviour
     private void Start()
     {
         index = 0;
-        
-        SelectCharacter();
+        flat = false;
+        //SelectCharacter();
     }
 
     public void OnPreButtonClick()
     {
-        Debug.Log("Click PreBtn");
         if (index > 0)
         {
             index--;
         }
-       
+        return true;
         SelectCharacter();
     }
 
     public void OnNextButtonClick() {
-        Debug.Log("Click NextBtn");
+        
         if (index < characters.Length -1 )
         {
             index++;
         }
-       
         SelectCharacter();
+        return true;
     }
 
     private void SelectCharacter()
@@ -55,4 +55,6 @@ public class ChoosePlayerButton : MonoBehaviour
         Debug.Log("Lenght " + characters.Length);
     }
    
+
+       
 }
