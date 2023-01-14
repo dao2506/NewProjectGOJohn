@@ -9,6 +9,7 @@ TagManager:
   - coc
   - Coc
   - Space
+  - Audio
   layers:
   - Default
   - TransparentFX
