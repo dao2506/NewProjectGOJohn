@@ -12,7 +12,7 @@ public class SelectPlayer : MonoBehaviour
     public List<Sprite> characters = new List<Sprite>();
     private int selectedCharacter = 0;
     public GameObject playerCharacter;
-    private string[] characterNames = { "Chicken John", "Eagle", "Yellow Bird" };
+    //private string[] characterNames = { "Chicken John", "Eagle", "Yellow Bird" };
     public static string selectedCharacterName = "Chicken John";
     
     public void NextOption()
@@ -40,7 +40,20 @@ public class SelectPlayer : MonoBehaviour
 
     public void PlayGame()
     {
-        PrefabUtility.SaveAsPrefabAsset(playerCharacter, "Assets/Background/Bird in Select menu/Bird in Select menu.png");
+        string path = "Assets/Resources/Birds/Prefabs/Custom/Chicken John.prefab";
+        switch (selectedCharacter) {
+            case 0:
+                path = "Assets/Resources/Birds/Prefabs/Custom/Chicken John.prefab";
+                break;
+            case 1:
+                path = "Assets/Resources/Birds/Prefabs/Custom/Eagle.prefab";
+                break;
+            case 2:
+                path = "Assets/Resources/Birds/Prefabs/Custom/Yellow Bird.prefab";
+                break;
+
+        }
+        PrefabUtility.SaveAsPrefabAsset(playerCharacter, path);
         UnityEngine.Application.LoadLevel("Levels/Level1");
     }
     //void Start()
