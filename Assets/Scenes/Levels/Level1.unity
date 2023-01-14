@@ -1282,6 +1282,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8278026635273930508, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278026635273930508, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278026635273930508, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278026635273930508, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278026635273930508, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8278026635273930510, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1332,7 +1352,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8278026635273930514, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278026636091500353, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d5442fd69fe5dc4d8257ce9cb182279, type: 3}
@@ -2169,7 +2193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1786726439
 MonoBehaviour:
   m_ObjectHideFlags: 0
